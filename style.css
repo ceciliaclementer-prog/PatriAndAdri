@@ -1,0 +1,2613 @@
+/* ==========================================================
+   DESPEDIDA DE PATRICIA
+   STYLE.CSS
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #eef8fb 0%,
+        #f8ffff 50%,
+        #e4f6f4 100%
+    );
+
+    color:#264653;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+   CONFETI
+========================== */
+
+#confetti{
+
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:999;
+
+}
+
+/* ==========================
+   PORTADA
+========================== */
+
+.hero{
+
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+
+}
+
+.hero-img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.55);
+
+    animation:zoomHero 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes zoomHero{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.12);
+    }
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(8,38,66,.15),
+
+        rgba(8,38,66,.60)
+
+    );
+
+}
+
+.hero-text{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    color:white;
+
+    width:90%;
+
+}
+
+.hero-text h2{
+
+    font-size:20px;
+
+    letter-spacing:8px;
+
+    font-weight:300;
+
+    margin-bottom:20px;
+
+}
+
+.hero-text h1{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:80px;
+
+    text-shadow:0 8px 25px rgba(0,0,0,.45);
+
+}
+
+.hero-text p{
+
+    margin-top:15px;
+
+    font-size:30px;
+
+    font-weight:500;
+
+}
+
+.hero-text span{
+
+    display:block;
+
+    margin:30px 0;
+
+    font-size:20px;
+
+    letter-spacing:4px;
+
+}
+
+/* ==========================
+   BOTÓN
+========================== */
+
+.boton{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:18px 45px;
+
+    background:#0F4C81;
+
+    color:white;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(15,76,129,.35);
+
+}
+
+.boton:hover{
+
+    background:#155d99;
+
+    transform:translateY(-5px);
+
+}
+
+/* ==========================
+   SECCIONES
+========================== */
+
+section{
+
+    padding:70px 20px;
+
+}
+
+.intro{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.intro h2{
+
+    font-size:30px;
+
+    color:#0F4C81;
+
+    margin-bottom:25px;
+
+}
+
+.intro p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/* ==========================
+   TARJETA DESTINO
+========================== */
+
+.destino{
+
+    background:#edf9f8;
+
+}
+
+.card{
+
+    max-width:700px;
+
+    font-size: 20px;
+
+    margin:auto;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 20px 50px rgba(0,90,120,.12);
+
+}
+
+.card h2{
+
+    color:#0F4C81;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================
+   PLANNING
+========================== */
+
+.titulo{
+
+    text-align:center;
+
+    color:#0F4C81;
+
+    font-size:30px;
+
+    margin-bottom:60px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.dia{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    transition:.4s;
+
+    box-shadow:0 20px 40px rgba(0,90,120,.12);
+
+}
+
+.dia:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.dia h3{
+
+    color:#0F4C81;
+
+    margin-bottom:20px;
+
+    font-size:26px;
+
+}
+
+.dia ul{
+
+    list-style:none;
+
+}
+
+.dia li{
+
+    padding:12px 0;
+
+    border-bottom:1px solid #e7ecef;
+
+}
+
+/* Tarjeta especial */
+
+.especial{
+
+    background:linear-gradient(
+
+        180deg,
+
+        #d8fbff 0%,
+
+        #ffffff 100%
+
+    );
+
+    border:4px solid #2EC4B6;
+
+    position:relative;
+
+}
+
+.especial::before{
+
+    content:"🌊";
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:30px;
+
+}
+
+/* ==========================
+   CONTADOR
+========================== */
+
+.contador{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #0F4C81,
+
+        #1B6CA8
+
+    );
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.contador h2{
+
+    font-size:40px;
+
+}
+
+#countdown{
+
+    margin-top:30px;
+
+    font-size:35px;
+
+    font-weight:bold;
+
+}
+/* ==========================
+   VÍDEO DE LA BODA
+========================== */
+
+.video-boda {
+    width: 100%;
+    max-width: 550px;
+    margin: 35px auto 0;
+}
+
+.video-boda video {
+    display: block;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .20);
+}
+
+/* ==========================
+   CUENTA ATRÁS
+========================== */
+
+.contador {
+    background: #175889;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.contador h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+#countdown {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+#countdown strong {
+    font-weight: 700;
+}
+
+.fecha-boda {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================
+   VÍDEO
+========================== */
+
+.video-boda {
+    width: 100%;
+    max-width: 500px;
+    margin: 35px auto 0;
+}
+
+.video-boda video {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.20);
+}
+
+
+/* ==========================
+   MÓVIL
+========================== */
+
+@media (max-width: 768px) {
+
+    .contador {
+        padding: 50px 15px;
+    }
+
+    .contador h2 {
+        font-size: 26px;
+    }
+
+    #countdown {
+        font-size: 28px;
+        line-height: 1.6;
+    }
+
+    .fecha-boda {
+        font-size: 17px;
+    }
+
+    .video-boda {
+        width: 75%;
+        max-width: 320px;
+    }
+
+    .video-boda video {
+        max-height: 350px;
+        border-radius: 18px;
+    }
+}
+/* ==========================
+   MÓVIL
+========================== */
+
+@media (max-width: 768px) {
+
+    .video-boda {
+        width: 75%;
+        max-width: 320px;
+        margin-top: 30px;
+    }
+
+    .video-boda video {
+        width: 100%;
+        max-height: 350px;
+        border-radius: 18px;
+    }
+
+    .cuenta-boda {
+        margin-top: 35px;
+    }
+
+    .cuenta-boda h3 {
+        font-size: 22px;
+    }
+
+    #countdown {
+        font-size: 34px;
+    }
+
+    .cuenta-boda p {
+        font-size: 17px;
+    }
+}
+/* ==========================
+   FOTO FINAL
+========================== */
+
+.final{
+
+    background:#f3fcfc;
+
+    text-align:center;
+
+}
+
+.final h2{
+
+    color:#0F4C81;
+
+    font-size:35px;
+
+}
+
+.final h3{
+
+    margin:25px 0;
+
+    font-size:30px;
+
+    color:#2A9D8F;
+
+}
+
+.final img{
+
+    width:90%;
+
+    max-width:400px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+}
+
+.final img:hover{
+
+    transform:scale(1.04) rotate(-1deg);
+
+}
+
+.final p{
+
+    margin-top:30px;
+
+    font-size:26px;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    background:#0F4C81;
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+footer h2{
+
+    margin-bottom:15px;
+
+    font-size:34px;
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2EC4B6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eaf5f6;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero-text h1{
+
+    font-size:55px;
+
+}
+
+.hero-text h2{
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
+}
+
+.hero-text p{
+
+    font-size:26px;
+
+}
+
+.hero-text span{
+
+    font-size:17px;
+
+}
+
+.boton{
+
+    padding:15px 30px;
+
+}
+
+.titulo{
+
+    font-size:36px;
+
+}
+
+.intro h2{
+
+    font-size:34px;
+
+}
+
+.intro p{
+
+    font-size:18px;
+
+}
+
+.card{
+
+    padding:30px;
+
+}
+
+#countdown{
+
+    font-size:30px;
+
+}
+
+.final h2{
+
+    font-size:30px;
+}
+
+.final h3{
+
+    font-size:24px;
+
+}
+
+.final p{
+
+    font-size:20px;
+
+}}
+/* ==========================
+   ALOJAMIENTO
+========================== */
+
+.alojamiento{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:white;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,80,120,.15);
+
+}
+
+.alojamiento-img{
+
+    flex:1;
+
+    min-height:300px;
+
+}
+
+.alojamiento-img img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+
+}
+
+.alojamiento-img img:hover{
+
+    transform:scale(1.05);
+
+}
+
+.alojamiento-info{
+
+    flex:1;
+
+    padding:70px;
+
+}
+
+.alojamiento-info h2{
+
+    color:#0F4C81;
+
+    font-size:25px;
+
+    margin-bottom:20px;
+
+}
+
+.alojamiento-info h3{
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+    color:#2A9D8F;
+
+}
+
+.alojamiento-info p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.alojamiento{
+
+    flex-direction:column;
+
+}
+
+.alojamiento-img{
+
+    width:100%;
+
+    min-height:280px;
+
+}
+
+.alojamiento-info{
+
+    padding:35px;
+
+}
+
+}
+/* ==========================
+   PUNTO DE ENCUENTRO
+========================== */
+
+.encuentro .card{
+
+    max-width:850px;
+    margin:auto;
+    padding:50px 60px;
+
+}
+
+.info-encuentro{
+
+    max-width:600px;
+    margin:auto;
+    text-align:left;
+
+}
+
+.info-encuentro h3{
+
+    text-align:left;
+    margin-bottom:35px;
+    color:#0F4C81;
+    font-size:38px;
+
+}
+
+.info-encuentro p{
+
+    font-size:28px;
+    margin:22px 0;
+    line-height:1.6;
+    text-align: left;
+
+}
+
+.importante{
+
+    margin-top:45px !important;
+    padding-top:25px;
+    border-top:2px dashed #8ac6d1;
+
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 60px;
+
+    background:rgba(8,42,68,.88);
+
+    backdrop-filter:blur(10px);
+
+    z-index:9999;
+
+}
+
+.logo{
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.navbar ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:#67d5d1;
+
+}
+
+.team{
+    padding:170px 110px 80px;
+
+    text-align:center;
+}
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:45px;
+
+    max-width:1200px;
+
+    margin:auto;
+    margin-top: 100px;
+
+}
+
+.persona{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+    animation:flotar 4s ease-in-out infinite;
+
+}
+
+.persona:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.persona:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+.persona:nth-child(4){
+
+    animation-delay:1.5s;
+
+}
+
+.persona:nth-child(5){
+
+    animation-delay:2s;
+
+}
+
+.persona:nth-child(6){
+
+    animation-delay:2.5s;
+
+}
+
+.persona:hover{
+
+    transform:scale(1.08) rotate(0deg);
+
+}
+
+.persona img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+}
+
+.persona h2{
+
+    padding:22px;
+
+    text-align:center;
+
+    color:#0F4C81;
+
+}
+
+.persona:nth-child(odd){
+
+    transform:rotate(-3deg);
+
+}
+
+.persona:nth-child(even){
+
+    transform:rotate(3deg);
+
+}
+
+@keyframes flotar{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ==========================
+   MALETA
+========================== */
+
+.maleta{
+
+    max-width:900px;
+
+    margin:150px auto 80px;
+
+    padding:50px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+.maleta h1{
+
+    text-align:center;
+
+    color:#0F4C81;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.maleta p{
+
+    text-align:center;
+
+    font-size:18px;
+
+    margin-bottom:45px;
+
+}
+
+.checklist{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:18px;
+
+}
+
+.checklist label{
+
+    background:#eef8fb;
+
+    border-radius:18px;
+
+    padding:18px 20px;
+
+    font-size:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.checklist label:hover{
+
+    transform:translateX(8px);
+
+    background:#d9f2f2;
+
+}
+
+.checklist input{
+
+    transform:scale(1.4);
+
+}
+.persona video{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+
+}
+
+/*==============================
+  AVISO IMPORTANTE
+==============================*/
+
+.aviso{
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    background:#dff7ff;
+
+    border-left:8px solid #0077b6;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.aviso h2{
+
+    color:#0b4f6c;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+
+}
+
+.aviso p{
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:#234;
+
+}
+
+.destacado{
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+    color:#005f73;
+
+    font-size:14px;
+
+}
+
+
+/*==============================
+  VIDEO
+==============================*/
+
+.video-maleta{
+
+    max-width:300px;
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+.video-maleta h2{
+
+    color:#0b4f6c;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+.video-maleta video{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+}
+/*==============================
+  GALERÍA FOTOS Y VÍDEOS
+==============================*/
+
+.galeria{
+
+    max-width:1100px;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.media{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+    background:white;
+
+}
+
+.media:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.media img,
+.media video{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* ==========================
+   TARJETAS TEAM
+========================== */
+
+.persona{
+
+    height:430px;
+
+    perspective:1000px;
+
+    cursor:pointer;
+
+}
+
+
+.persona-inner{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    transition:transform .8s;
+
+    transform-style:preserve-3d;
+
+}
+
+
+/* Cuando se hace clic */
+
+.persona.volteada .persona-inner{
+
+    transform:rotateY(180deg);
+
+}
+
+
+.persona-front,
+.persona-back{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    backface-visibility:hidden;
+
+    -webkit-backface-visibility:hidden;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+.ver-plan{
+    text-align:center;
+    margin-top:60px;
+}
+
+.ver-plan .boton{
+    font-size:20px;
+    padding:18px 40px;
+}
+.plan-page{
+
+    max-width:1000px;
+
+    margin:140px auto;
+
+    padding:20px;
+
+}
+
+.plan-page h1{
+
+    text-align:center;
+
+    font-size:60px;
+
+    color:#0F4C81;
+
+    margin-bottom:50px;
+
+}
+
+.plan-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    margin-bottom:50px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+.plan-card img{
+
+    width:100%;
+
+    max-height:450px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin:20px 0;
+
+}
+
+.plan-card h2{
+
+    color:#0F4C81;
+
+    margin-bottom:20px;
+
+}
+
+.plan-card h3{
+
+    margin-top:20px;
+
+}
+/* =========================================================
+   PLANNING DETALLADO
+========================================================= */
+
+.planning-header{
+
+    text-align:center;
+    padding:70px 20px 50px;
+
+    background:#eefaff;
+}
+
+.planning-header h1{
+
+    color:#15558a;
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.planning-header p{
+
+    font-size:20px;
+    color:#31576b;
+}
+
+
+/* =========================================================
+   DÍAS
+========================================================= */
+
+.dia-detallado{
+
+    padding:65px 8%;
+}
+
+
+/* Fondo blanco */
+
+.dia-blanco{
+
+    background:#ffffff;
+}
+
+
+/* Fondo azul claro */
+
+.dia-azul{
+
+    background:#eef9fc;
+}
+
+
+/* =========================================================
+   TÍTULO DEL DÍA
+========================================================= */
+
+.dia-titulo{
+
+    max-width:1050px;
+    margin:0 auto 40px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.dia-titulo span{
+
+    font-size:38px;
+}
+
+.dia-titulo h2{
+
+    margin:0;
+
+    color:#15558a;
+
+    font-size:38px;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   PLAN
+========================================================= */
+
+.plan{
+
+    max-width:1050px;
+
+    margin:0 auto 55px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:55px;
+}
+
+
+/* Imagen derecha */
+
+.bloque-derecha{
+
+    flex-direction:row;
+}
+
+
+/* Imagen izquierda */
+
+.bloque-izquierda{
+
+    flex-direction:row;
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.plan-texto{
+
+    flex:1;
+}
+
+.plan-texto h3{
+
+    font-size:28px;
+
+    color:#087f8c;
+
+    margin:10px 0 15px;
+}
+
+.plan-texto p{
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:#294b5d;
+
+    margin-bottom:12px;
+}
+
+.plan-texto ul{
+
+    padding-left:20px;
+
+    margin-top:15px;
+}
+
+.plan-texto li{
+
+    font-size:17px;
+
+    margin:8px 0;
+
+    color:#294b5d;
+}
+
+
+/* =========================================================
+   ETIQUETA
+========================================================= */
+
+.etiqueta{
+
+    display:inline-block;
+
+    padding:7px 15px;
+
+    border-radius:30px;
+
+    background:#d9f2f5;
+
+    color:#087f8c;
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+
+/* =========================================================
+   IMÁGENES
+========================================================= */
+
+.plan-imagen{
+
+    flex:0 0 370px;
+}
+
+.plan-imagen img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    display:block;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+    transition:.4s;
+}
+
+.plan-imagen img:hover{
+
+    transform:scale(1.03);
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.boton{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:13px 25px;
+
+    border-radius:40px;
+
+    background:#15558a;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.boton:hover{
+
+    background:#087f8c;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   PLAN ALTERNATIVO
+========================================================= */
+
+.alternativa{
+
+    max-width:1050px;
+
+    margin:70px auto 0;
+
+    padding:35px;
+
+    background:#ffffff;
+
+    border:2px dashed #4aaeba;
+
+    border-radius:25px;
+}
+
+.alternativa > h3{
+
+    color:#15558a;
+
+    font-size:27px;
+
+    margin-bottom:10px;
+}
+
+.alternativa > p{
+
+    color:#31576b;
+
+    margin-bottom:30px;
+}
+
+
+/* =========================================================
+   CARRUSEL
+========================================================= */
+
+.carrusel{
+
+    position:relative;
+
+    width:100%;
+
+    height:230px;
+
+    overflow:hidden;
+
+    border-radius:25px;
+}
+
+.carrusel .slide{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:0;
+
+    transition:opacity 1s ease;
+}
+
+.carrusel .slide.activo{
+
+    opacity:1;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.planning-final{
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:#dff5f8;
+}
+
+.planning-final h2{
+
+    color:#15558a;
+
+    font-size:35px;
+
+    margin-bottom:20px;
+}
+
+.planning-final p{
+
+    font-size:20px;
+
+    color:#31576b;
+
+    margin:10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:800px){
+
+    .planning-header h1{
+
+        font-size:36px;
+    }
+
+    .dia-detallado{
+
+        padding:50px 20px;
+    }
+
+    .dia-titulo h2{
+
+        font-size:30px;
+    }
+
+    .plan{
+
+        flex-direction:column;
+
+        gap:25px;
+
+        align-items:stretch;
+
+        margin-bottom:50px;
+    }
+
+    /*
+       En móvil siempre ponemos primero
+       la imagen y después el texto.
+    */
+
+    .plan-imagen{
+
+        flex:initial;
+
+        width:100%;
+    }
+
+    .plan-texto{
+
+        width:100%;
+    }
+
+    .plan-imagen img,
+    .carrusel{
+
+        height:220px;
+    }
+
+    .plan-texto h3{
+
+        font-size:25px;
+    }
+
+    .plan-texto p,
+    .plan-texto li{
+
+        font-size:16px;
+    }
+
+    .alternativa{
+
+        padding:25px 18px;
+    }
+
+}
+
+/* ==========================
+   SLIDESHOW
+========================== */
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.slideshow img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    animation: cambiarImagen 12s infinite;
+}
+
+/* Primera imagen */
+.slideshow img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+/* Segunda imagen */
+.slideshow img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+/* Tercera imagen */
+.slideshow img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes cambiarImagen {
+
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    38% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+/* =====================================================
+   PÁGINAS NOVIO / NOVIA
+===================================================== */
+
+.persona-hero {
+
+    min-height: 55vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff7fa,
+            #eef9ff,
+            #cdebf5
+        );
+
+    padding: 100px 20px 70px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.persona-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(77,184,255,.15);
+
+    border-radius: 50%;
+
+    top: -250px;
+    left: -150px;
+}
+
+.persona-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background: rgba(0,150,160,.12);
+
+    border-radius: 50%;
+
+    bottom: -250px;
+    right: -150px;
+}
+
+.persona-hero-text {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+.persona-emoji {
+
+    font-size: 70px;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+.persona-hero h1 {
+
+    font-size: 75px;
+
+    color: #14568b;
+
+    margin: 0 0 15px;
+
+    font-weight: 700;
+}
+
+.persona-hero p {
+
+    font-size: 24px;
+
+    color: #294d60;
+
+}
+
+.persona-hero h2 {
+
+    font-family: 'Pacifico', cursive;
+
+    font-size: 45px;
+
+    color: #008c9e;
+
+    margin: 15px 0;
+}
+
+.persona-subtitulo {
+
+    margin-top: 10px;
+
+    font-size: 20px !important;
+}
+
+
+/* =====================================================
+   PRESENTACIÓN
+===================================================== */
+
+.persona-presentacion {
+
+    padding: 80px 20px;
+
+    background: white;
+}
+
+.persona-contenido {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.persona-texto {
+
+    color: #24495d;
+}
+
+.etiqueta {
+
+    display: inline-block;
+
+    background: #dff6f8;
+
+    color: #087c8b;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.persona-texto h2 {
+
+    font-size: 48px;
+
+    color: #14568b;
+
+    margin-bottom: 20px;
+}
+
+.persona-texto p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+.persona-texto blockquote {
+
+    margin: 25px 0;
+
+    padding: 20px 25px;
+
+    border-left: 5px solid #00a6a6;
+
+    background: #eefafa;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    color: #087c8b;
+}
+
+
+/* =====================================================
+   IMÁGENES
+===================================================== */
+
+.persona-media {
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.persona-media img {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 35px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.18);
+
+    transition: .4s;
+}
+
+.persona-media img:hover {
+
+    transform: scale(1.03) rotate(1deg);
+}
+
+
+/* =====================================================
+   CARACTERÍSTICAS
+===================================================== */
+
+.caracteristicas {
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background: #eaf8fb;
+}
+
+.caracteristicas > h2 {
+
+    color: #14568b;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.seccion-intro {
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    color: #496675;
+
+    font-size: 18px;
+}
+
+.caracteristicas-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.caracteristica {
+
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+    transition: .35s;
+}
+
+.caracteristica:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}
+
+.caracteristica span {
+
+    font-size: 45px;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+.caracteristica h3 {
+
+    color: #14568b;
+
+    margin-bottom: 12px;
+
+    font-size: 21px;
+}
+
+.caracteristica p {
+
+    color: #526b77;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   VÍDEO
+===================================================== */
+
+.persona-video {
+
+    padding: 80px 20px;
+
+    background: white;
+}
+
+.video-contenido {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.video-texto h2 {
+
+    color: #14568b;
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.video-texto p {
+
+    color: #526b77;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+.video-marco video {
+
+    width: 100%;
+
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    box-shadow: 0 20px 45px rgba(0,0,0,.18);
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.persona-galeria {
+
+    padding: 80px 20px;
+
+    background: #eaf8fb;
+
+    text-align: center;
+}
+
+.persona-galeria h2 {
+
+    color: #14568b;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.persona-galeria > p {
+
+    color: #526b77;
+
+    margin-bottom: 45px;
+}
+
+.galeria-persona {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.media-persona {
+
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+
+    overflow: hidden;
+}
+
+.media-persona img,
+.media-persona video {
+
+    width: 100%;
+
+    height: 330px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 18px;
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.persona-final {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #14568b,
+            #087c8b
+        );
+
+    color: white;
+}
+
+.persona-final span {
+
+    font-size: 60px;
+}
+
+.persona-final h2 {
+
+    font-size: 42px;
+
+    margin: 20px 0;
+}
+
+.persona-final p {
+
+    max-width: 700px;
+
+    margin: 15px auto;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+.persona-final strong {
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   NOVIA
+===================================================== */
+
+.novia-hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5f8f8,
+            #f1fbff,
+            #d6f0f5
+        );
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .navbar ul {
+
+        gap: 12px;
+    }
+
+    .navbar a {
+
+        font-size: 13px;
+    }
+
+    .persona-hero {
+
+        min-height: 50vh;
+
+        padding-top: 120px;
+    }
+
+    .persona-hero h1 {
+
+        font-size: 52px;
+    }
+
+    .persona-hero h2 {
+
+        font-size: 35px;
+    }
+
+    .persona-emoji {
+
+        font-size: 55px;
+    }
+
+    .persona-contenido,
+    .video-contenido {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .persona-texto {
+
+        text-align: center;
+    }
+
+    .persona-media img {
+
+        height: 350px;
+    }
+
+    .caracteristicas-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria-persona {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+
+        padding: 15px;
+    }
+
+    .navbar ul {
+
+        gap: 8px;
+    }
+
+    .navbar a {
+
+        font-size: 11px;
+    }
+
+    .logo {
+
+        font-size: 18px;
+    }
+
+    .persona-hero h1 {
+
+        font-size: 42px;
+    }
+
+    .persona-hero p {
+
+        font-size: 18px;
+    }
+
+    .persona-texto h2 {
+
+        font-size: 38px;
+    }
+
+    .caracteristicas-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .persona-media img {
+
+        height: 300px;
+    }
+
+    .persona-final h2 {
+
+        font-size: 32px;
+    }
+
+}
